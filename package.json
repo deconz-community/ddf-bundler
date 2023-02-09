@@ -1,0 +1,57 @@
+{
+    "name": "ddf-bundler",
+    "type": "module",
+    "version": "0.0.1",
+    "description": "Tool to bundle or extract DDF",
+    "keywords": [
+      "deconz",
+      "drezden",
+      "conbee"
+    ],
+    "homepage": "https://github.com/deconz-community/ddf-bundler",
+    "bugs": {
+      "url": "https://github.com/deconz-community/ddf-bundler/issues/"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/deconz-community/ddf-bundler.git"
+    },
+    "author": {
+      "name": "Zehir",
+      "email": "zehir@zorim.fr",
+      "url": "https://github.com/Zehir"
+    },
+    "maintainers": [
+      {
+        "name": "Zehir",
+        "email": "zehir@zorim.fr",
+        "url": "https://github.com/Zehir"
+      }
+    ],
+    "funding": {
+      "type": "individual",
+      "url": "https://github.com/sponsors/Zehir"
+    },
+    "license": "GPL-3.0",
+    "source": "src/main.ts",
+    "exports": {
+      "require": "./dist/ddf-bundler.cjs",
+      "default": "./dist/ddf-bundler.modern.js"
+    },
+    "main": "./dist/ddf-bundler.cjs",
+    "module": "./dist/ddf-bundler.module.js",
+    "unpkg": "./dist/ddf-bundler.umd.js",
+    "scripts": {
+      "build": "microbundle",
+      "dev": "microbundle watch",
+      "up": "taze major -I"
+    },
+    "devDependencies": {
+      "@antfu/eslint-config": "^0.35.2",
+      "eslint": "^8.33.0",
+      "microbundle": "^0.15.1",
+      "pnpm": "^7.27.0",
+      "taze": "^0.8.5",
+      "typescript": "^4.9.5"
+    }
+  }
