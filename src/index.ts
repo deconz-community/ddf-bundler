@@ -1,7 +1,17 @@
-export function sum(a: number, b: number): number {
-  return a + b
+/**
+ * Demo function for template repository
+ *
+ * @remarks
+ * Read more about TSDoc at: {@link https://github.com/microsoft/tsdoc}
+ *
+ * @returns Nothing!
+ *
+ * @beta
+ */
+export function demo(): void {
+  if (__DEV__) {
+    console.log('this should only log in development build')
+  }
+  console.log(__VERSION__)
 }
-
-export const entryPoint = async (...args: string[]) => {
-  console.log(123)
-}
+demo()
