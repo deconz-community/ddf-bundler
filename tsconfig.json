@@ -4,7 +4,6 @@
     "rootDir": "./src",
     "module": "ESNext",
     "target": "ESNext",
-    "useDefineForClassFields": true,
     "lib": ["ESNext", "DOM"],
     "strict": true,
     "esModuleInterop": true,
@@ -36,9 +35,13 @@
   "vueCompilerOptions": {
     "plugins": [
       "@vue-macros/volar/define-model",
-      "@vue-macros/volar/define-slots"
+      "@vue-macros/volar/define-props",
+      "@vue-macros/volar/define-props-refs",
+      "@vue-macros/volar/short-vmodel",
+      "@vue-macros/volar/define-slots",
+      "@vue-macros/volar/export-props"
     ]
   },
   "include": ["src/index.ts"],
-  "exclude": ["**/*.test.ts", "node_modules", "test/**", ".history/**"]
+  "exclude": ["**/*.test.ts", "node_modules", "test/**", ".history/**", "playground"]
 }

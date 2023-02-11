@@ -35,6 +35,23 @@ module.exports = defineConfig({
     },
   },
   plugins: [
+    VueMacros({
+      plugins: {
+        vue: Vue({
+          reactivityTransform: false,
+        }),
+      },
+    }),
+
+    Pages({
+      dirs: 'playground/pages',
+      extensions: ['vue'],
+    }),
+
+    Layouts({
+      layoutsDirs: 'playground/layouts'
+    }),
+    
     AutoImport({
       // targets to transform
       include: [
@@ -52,22 +69,7 @@ module.exports = defineConfig({
       dirs: [
         './src/**',
       ],
-    
     }),
-    VueMacros({
-      plugins: {
-        vue: Vue({
-          reactivityTransform: true,
-        }),
-      },
-    }),
-    Pages({
-      dirs: 'playground/pages',
-      extensions: ['vue'],
-    }),
-    Layouts({
-      layoutsDirs: 'playground/layouts'
-    })
   ],
   base: "./",
   build: {
